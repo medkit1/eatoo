@@ -1,0 +1,58 @@
+.login-banner {
+    position: absolute;  /*způsob počítání polohy prvku.  absolute - prvek bude vyjmut z toku dokumentu a umístěn na určitých souřadnicích  relative, static, fixed, sticky*/
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0); /* element různě transformovat (natáčet, zkosit, posouvat, natahovat atd.) a to za pomocí 2D nebo 3D transformací */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;  /* to specify how an <img> or <video> should be resized to fit its container.   fill, contain, cover (udrzuje meritko), none, scale-down */
+  }
+
+.login-form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    height: 310px;
+    width: 270px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 0px 10px 0px 10px;    /* vnitrni ohraniceni */
+    overflow: auto;   /* specifies what should happen if content overflows an element's box  scrollbars?  scroll, hidden, auto, visible */
+    z-index: 1;      /*  priorita při překrývání -1...+1   */
+    text-align: center;
+  }
+
+  mat-card {
+    max-width: 400px;
+    margin: 0em auto;   /* vnejsi ohraniceni */
+    text-align: left;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;  
+}
+
+.big-button {
+ 
+    width: 270px;
+  }
+
+.small-button {
+    width: 135px;
+}
+
+.eato{
+  margin-top: 10px;
+  font-weight: 900;
+  font-size: 16px;
+}
+  

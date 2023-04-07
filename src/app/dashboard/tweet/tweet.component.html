@@ -1,0 +1,12 @@
+<p class="title">Lesson: {{lessonTweetSimpleDTO?.title}}</p>    <!-- <p>{{element.title}}</p>    also possinle-->
+<p class="description">Description: {{lessonTweetSimpleDTO?.description}} </p> 
+
+<div style="background-image: url('../../../assets/images/mainBackground2.png'); border-radius: 85% 85% 85% 85% / 30%;" >
+<!--<img class="login-banner" src="../../../assets/images/mainBackground2.png" alt="Login background" />  -->
+<p style="text-align: center;">Tweets</p>
+<p style="text-align: center;" *ngFor="let option of lessonTweetSimpleDTO?.tweets" [value]="option.text"> {{option.nick}}: {{option.text}}</p>
+<div class="t">
+<textarea (keydown.enter)="save($event)" placeholder="Enter your message" rows="3" cols="40"></textarea>
+</div>
+</div>
+

@@ -1,0 +1,26 @@
+<h1 mat-dialog-title>Registration</h1>
+<div mat-dialog-content>
+  <mat-form-field>
+    <input matInput placeholder="Username" [(ngModel)]="nick">
+  </mat-form-field>
+  <mat-form-field >
+    <input matInput placeholder="Fistname" [(ngModel)]="firstname">
+  </mat-form-field>
+  <mat-form-field >
+    <input matInput placeholder="Surname" [(ngModel)]="surname">
+  </mat-form-field>
+  <mat-form-field >
+    <input matInput placeholder="Email" [(ngModel)]="email">
+  </mat-form-field>
+  <mat-form-field >
+    <input matInput type="password" placeholder="Password" [(ngModel)]="password">
+  </mat-form-field>
+  <mat-form-field >
+    <input matInput type="password" placeholder="Password again" [(ngModel)]="passwordVerify">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary"  cdkFocusInitial (click)="onYesClick()">Register</button>
+  <button mat-raised-button color="primary" (click)="onNoClick()">Close</button>
+</div>
+

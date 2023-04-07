@@ -1,0 +1,58 @@
+<header></header>
+<div id="container">
+
+
+
+<div class="block">
+<form >
+  <mat-form-field class="example-full-width">
+      <input type="text" placeholder="Look up your classes..." aria-label="Number" matInput [formControl]="myControl"
+          [matAutocomplete]="auto" >
+      <mat-autocomplete #auto="matAutocomplete">
+          <mat-option *ngFor="let option of userClassSimpleDTO" [value]="option.title" (onSelectionChange)='getSelectedClazz(option, $event)' autocomplete="on">
+              {{option.title}}
+          </mat-option>
+      </mat-autocomplete>
+  </mat-form-field>
+ </form>
+</div>
+
+<div class="block">
+    <button class= "btn" (click)="openAddClassDialog()" >+ Class</button>
+</div>
+<!--
+<div class="block">
+  <form >
+    <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Look up any classes..." aria-label="Number" matInput [formControl]="myControl"
+            [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of allClassSimpleDTO" [value]="option.title" (onSelectionChange)='getSelectedClazz(option, $event)'>
+                {{option.title}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+   </form>
+  </div>
+
+-->
+
+
+</div>
+
+<div *ngIf="pickedClass != null">
+  <class [element]="pickedClass"></class>
+</div>
+
+
+ 
+   
+
+      
+
+
+
+<!--  http://dev-reboot.com/pwa-navigation/  -->
+
+
+

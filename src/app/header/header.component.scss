@@ -1,0 +1,86 @@
+
+.headerr {
+    padding-top: -10px;
+    padding-bottom: 1px;
+    padding-left: 0px;
+    padding-right: 10px;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 20px;
+    height: 50px;
+    
+    
+}
+
+.headerr2 {
+    float:left;
+  margin: 10px;
+   
+}
+
+.login-banner {
+  //  position: absolute;  /*způsob počítání polohy prvku.  absolute - prvek bude vyjmut z toku dokumentu a umístěn na určitých souřadnicích  relative, static, fixed, sticky*/
+  //  top: 3%;
+ //   left: 1%;
+ //   transform: translate3d(0, -50%, 0); /* element různě transformovat (natáčet, zkosit, posouvat, natahovat atd.) a to za pomocí 2D nebo 3D transformací */
+  
+  
+  }
+
+
+
+  *{padding: 0; margin: 0; box-sizing: border-box;}
+ // body{height: 900px;}
+  .header {
+  //  background: "../../../assets/images/mainBackground2.png";// url('http://www.autodatz.com/wp-content/uploads/2017/05/Old-Car-Wallpapers-Hd-36-with-Old-Car-Wallpapers-Hd.jpg');
+    text-align: center;
+    width: 100%;
+    height: auto;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 85% 85% / 30%;
+  }
+  .header .overlay{
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    color: #FFF;
+    text-shadow: 1px 1px 1px #333;
+    background-image: linear-gradient( 135deg, #9f05ff69 10%, #fd5e086b 100%);
+ // background-image: url('../../assets/images/login_background2.webp');
+    
+  }
+  
+  img{
+    opacity: 0.6;
+    border-radius: 35%;
+  }
+
+  h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 80px;
+    margin-bottom: 10px;
+  }
+  
+  h3, p {
+    font-family: 'Dancing Script', cursive;
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: #333;
+    background: #fff;
+    margin-bottom: 5px;
+    box-shadow: 0 3px 20px 0 #0000003b;
+  }
+  button:hover{
+    cursor: pointer;
+  }

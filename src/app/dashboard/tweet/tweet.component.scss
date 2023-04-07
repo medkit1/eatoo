@@ -1,0 +1,35 @@
+.title{
+    margin-left: 20px;
+    text-align: left;
+    display: inline-block;
+}
+
+
+.description{
+    margin-left: 20px;
+   
+
+   
+}
+
+
+textarea{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   
+   
+  }
+
+
+  .login-banner {
+    position: absolute;  /*způsob počítání polohy prvku.  absolute - prvek bude vyjmut z toku dokumentu a umístěn na určitých souřadnicích  relative, static, fixed, sticky*/
+    top: 50%;
+    left: 0;
+    transform: translate3d(0, -50%, 0); /* element různě transformovat (natáčet, zkosit, posouvat, natahovat atd.) a to za pomocí 2D nebo 3D transformací */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;  /* to specify how an <img> or <video> should be resized to fit its container.   fill, contain, cover (udrzuje meritko), none, scale-down */
+    z-index: -1;  
+  }
+

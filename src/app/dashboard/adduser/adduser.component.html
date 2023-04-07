@@ -1,0 +1,31 @@
+<h1 mat-dialog-title>Add user</h1>
+<div mat-dialog-content>
+<!--  <mat-form-field>
+    <input matInput placeholder="Title" [(ngModel)]="title">
+  </mat-form-field>
+  <mat-form-field >
+    <input matInput placeholder="Description" [(ngModel)]="description">
+  </mat-form-field>  -->
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+        <input type="text" placeholder="Look up any users..." aria-label="Number" matInput [formControl]="myControl"
+            [matAutocomplete]="auto">
+        <mat-autocomplete #auto="matAutocomplete">
+            <mat-option *ngFor="let option of user" [value]="option.nick" (onSelectionChange)='getSelectedLesson(option, $event)'>
+              {{option.nick}} - {{option.firstname}} {{option.surname}}
+            </mat-option>
+        </mat-autocomplete>
+    </mat-form-field>
+   </form>
+
+   <br>
+   <ul>
+    <li *ngFor="let user of listpickedUsers">{{user.nick}} - {{user.firstname}} {{user.surname}}</li>
+  </ul>
+
+
+
+<div mat-dialog-actions>
+ <!-- <button mat-raised-button color="primary"  cdkFocusInitial (click)="onYesClick()">Add</button> -->
+  <button mat-raised-button color="primary" (click)="onNoClick()">Close</button>
+</div>

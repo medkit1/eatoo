@@ -1,0 +1,29 @@
+<p class="title">Class: {{classLessonSimpleDTO?.title}}</p>    <!-- <p>{{element.title}}</p>    also possinle-->
+<button class="btn" (click)="openGetUsersDialog()">Users</button>
+<button class="btn" (click)="openAddUserDialog()">+ User</button>
+<p class="description">Description: {{classLessonSimpleDTO?.description}} </p> 
+
+
+<div class="lesson">
+    <form class="example-form">
+      <mat-form-field class="example-full-width">
+          <input type="text" placeholder="Look up any lessons..." aria-label="Number" matInput [formControl]="myControl"
+              [matAutocomplete]="auto">
+          <mat-autocomplete #auto="matAutocomplete">
+              <mat-option *ngFor="let option of classLessonSimpleDTO?.lessons" [value]="option.title" (onSelectionChange)='getSelectedLesson(option, $event)'>
+                  {{option.title}}
+              </mat-option>
+          </mat-autocomplete>
+      </mat-form-field>
+     </form>
+    </div>
+    <button class="btn2" (click)="openAddLessonDialog()">+ Lesson</button>
+
+    <div  *ngIf="pickedLesson != null">
+        <app-tweet [element]="pickedLesson"></app-tweet>
+    </div>   
+    
+
+    
+
+
