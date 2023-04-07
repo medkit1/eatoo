@@ -4,8 +4,8 @@
   "scripts": {
 
     "start": "node server.js",
-    "build": "ng build --configuration production",
-    "heroku-postbuild": "npm install && npm run build"
+    "build": "ng build",
+    "heroku-postbuild": "ng build --aot --configuration production"
 
   },
   "private": true,
